@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer JS</title>
+    <style>
+      .block {
+        width: 100px;
+        height: 50px;
+        background-color: red;
+        position: relative;
+        bottom: 30px;
+        left: 150px;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        opacity: 0;
+        transition: opacity 250ms;
+      }
+      .visible {
+        opacity: 1;
+        animation: animate 1s;
+      }
+
+      @keyframes animate {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="task1">
+      <h2>Task 1</h2>
+      <div id="timer1">01:00:00</div>
+    </section>
+    <section class="task2">
+      <h2>Task 2</h2>
+      <div id="timer2">30:000</div>
+      <button disabled type="button">Почати знову</button>
+      <div class="block">Залишилось 10 секунд!</div>
+    </section>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
